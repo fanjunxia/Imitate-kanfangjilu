@@ -1,0 +1,250 @@
+$color1: rgb(76, 76, 76);
+$color2: rgb(170, 173, 173);
+
+body, ul, h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: $color1;
+}
+
+a {
+  text-decoration: none;
+  color: $color1;
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.header, .footer {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+.download {
+  font-size: 0;
+  overflow: hidden;
+  .item {
+    display: block;
+    float: left;
+    padding: 5px 15px;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 47px;
+    position: relative;
+    span {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+    }
+    &:nth-of-type(1)::before,&:nth-of-type(2)::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 13px;
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+    }
+    &:nth-of-type(1)::before {
+      background-image: url('../images/apple.png');
+    }
+    &:nth-of-type(2)::before {
+      background-image: url('../images/android.png');
+    }
+    &:nth-of-type(3){
+      height: 35px;
+      width: 32px;
+      padding-left: 5px;
+      padding-right: 5px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.header {
+  .header-nav {
+    padding: 20px 0;
+    height: 40px;
+    overflow: hidden;
+    .nav-logo {
+      float: left;
+      width: 160px;
+      height: 40px;
+      text-indent: -999em;
+      background: url('../images/logo.png') no-repeat center;
+      background-size: contain;
+    }
+    .nav-menu {
+      float: right;
+      .item {
+        float: left;
+        a {
+          height: 40px;
+          padding: 0 10px;
+          font-size: 14px;
+          line-height: 40px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .header-banner {
+    margin-top: 100px;
+    .banner-img {
+      float: right;
+      width: 380px;
+      margin-top: -80px;
+      img {
+        width: 100%;
+      }
+    }
+    .banner-title {
+      margin-bottom: 20px;
+      text-indent: -999em;
+      font-size: 0;
+      span {
+        display: inline-block;
+        height: 48px;
+        width: 250px;
+        &:nth-of-type(1) {
+          background-image: url('../images/slogan-1.jpg');
+        }
+        &:nth-of-type(2) {
+          background-image: url('../images/slogan-2.jpg');
+        }
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+    .banner-desc {
+      font-size: 24px;
+      color: $color2;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+  }
+  .more{
+    text-align: center;
+    margin: 50px 0;
+    font-size: 14px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer{
+  padding-top: 60px;
+  text-align: center;
+  .footer-download{
+    display: inline-block;
+    p{
+      color: $color1;
+      font-size: 16px;
+      margin-bottom: 32px;
+      margin-top: 0;
+    }
+  }
+  .footer-content{
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .footer-menu{
+      display: inline-block;
+      .item{
+        display: inline-block;
+        margin-right: 5px;
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    .copyright{
+      display: inline-block;
+      color: $color2;
+    }
+  }
+}
+
+.content{
+  background-color: rgb(242,242,242);
+  .l{
+    float: left;
+  }
+  .r{
+    float: right;
+  }
+  .container{
+    width: 820px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .content-item{
+    margin: 80px 0;
+    overflow: hidden;
+  }
+  .content-img{
+    width: 306px;
+    height: 306px;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .content-text{
+    width: 50%;
+    padding-top: 48px;
+    h2{
+      font-size: 40px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+    p{
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+
+  .content-note{
+    .content-img{
+      background-image: url('../images/feature-note.jpg');
+    }
+  }
+  .content-privacy{
+    .content-img{
+      background-image: url('../images/feature-privacy.jpg');
+    }
+  }
+  .content-share{
+    .content-img{
+      background-image: url('../images/feature-share.jpg');
+    }
+  }
+}
